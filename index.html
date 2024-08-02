@@ -24,9 +24,9 @@
     <div class="content">
         <div class="start">
             <div class="card_left">
-                <h3>Hello World, me chamo</h3>
+                <h3>Hello World! Meu nome é</h3>
                 <h1>Gustavo Santos</h1>
-                <h3>Estudante e Desenvolvedor Junior</h3>
+                <h3 id="typing-text">Sou</h3>
                 <ul>
                     <li><a href="https://www.linkedin.com/in/gustavo-pereira-dos-santos-9b726826a/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a href="https://www.instagram.com/gugassantos_?igsh=ZzFlcGI3eHhkNHAx" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -38,6 +38,58 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const textElement = document.getElementById('typing-text');
+            const phrases = [
+                "Primeira frase aqui.",
+                "Nova frase adicionada.",
+                "Última frase aqui.",
+                "Mais uma frase aqui."
+            ];
+            let phraseIndex = 0;
+
+            function typeText(text, callback) {
+                textElement.textContent = '';
+                let index = 0;
+                let interval = setInterval(() => {
+                    if (index < text.length) {
+                        textElement.textContent += text[index];
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                        setTimeout(callback, 1000); // Aguarda 1 segundo antes de chamar o callback
+                    }
+                }, 100);
+            }
+
+            function deleteText(callback) {
+                let currentText = textElement.textContent;
+                let length = currentText.length;
+                let interval = setInterval(() => {
+                    if (length > 0) {
+                        textElement.textContent = currentText.substring(0, length - 1);
+                        length--;
+                    } else {
+                        clearInterval(interval);
+                        setTimeout(callback, 500); // Aguarda 0,5 segundo antes de chamar o callback
+                    }
+                }, 100);
+            }
+
+            function loopThroughPhrases() {
+                typeText(phrases[phraseIndex], () => {
+                    deleteText(() => {
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                        loopThroughPhrases();
+                    });
+                });
+            }
+
+            loopThroughPhrases();
+        });
+    </script>
 
     <div class="footer">
 
