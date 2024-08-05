@@ -10,12 +10,12 @@
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 12ch; } /* Define o número de caracteres visíveis */
+    to { width: 20ch; } /* Define o número de caracteres visíveis */
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: black; }
+    50% { border-color: #ffffff; }
 }
 
 *{
