@@ -45,3 +45,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loopThroughPhrases();
 });
+
+function showContent(option) {
+    const contents = document.querySelectorAll('.content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    const activeContent = document.getElementById(option);
+    activeContent.classList.add('active');
+}
+
+// Mostrar a primeira opção por padrão
+document.addEventListener('DOMContentLoaded', () => {
+    showContent('option1');
+});
