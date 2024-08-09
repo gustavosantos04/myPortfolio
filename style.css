@@ -25,7 +25,6 @@
 }
 
 body{
-    /*border: 1px solid black;*/
     background-color: black;
     color: white;
     width: 1500px;
@@ -107,7 +106,7 @@ body{
 }
 
 #typing-text {
-    color: red;
+    color: #cc0404;
 }
 
 .card_left ul {
@@ -143,36 +142,49 @@ body{
 
 .about{
     margin-top: 45px;
+    margin-bottom: 45px;
     width: 100%;
     height: 750px;
     display: flex;
+    flex-direction: column;
     border: 1px solid white;
 }
 
-.left-panel {
-    width: 40%;
-    padding: 20px;
-    background-color: #007BFF;
-    color: #fff;
+.about h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.left-panel h2 {
-    margin-bottom: 20px;
+.panels {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-panel {
+    border: 1px solid red;
+    width: 40%;
+}
+
+.right.panel {
+    width: 60%;
+    text-align: center;
+    margin: auto;
 }
 
 .menu {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50px;
+    margin: 30px 0px;
 }
 
 .menu button {
     display: block;
-    width: 100px;
     padding: 10px;
-    margin: 0px 10px;
-    background-color: #0056b3;
+    width: 100px;
+    background-color: transparent;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -181,18 +193,43 @@ body{
 }
 
 .menu button:hover {
-    background-color: #004080;
+    background-color: #cc0404;
 }
 
-.right-panel {
-    width: 60%;
-    padding: 20px;
+.menu button i {
+    font-size: 24px;
 }
 
 .content {
     display: none;
+    
 }
 
 .content.active {
-    display: block;
+    display: flex;
+    height: 300px;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.content p {
+    font-size: 20px;
+    margin: 25 25px;
+    word-spacing: 0.3em; 
+    line-height: 1.8; 
+    text-align: justify;
+}
+
+.content ul {
+    font-size: 20px;
+    margin: auto;
+    word-spacing: 0.3em; 
+    line-height: 1.8; 
+    text-align: justify;
+}
+
+.footer {
+    background-color: white;
+    width: 100%;
+    height: 200px;
 }
