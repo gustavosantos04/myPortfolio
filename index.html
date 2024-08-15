@@ -12,8 +12,8 @@
         <h1> &lt;gs/&gt; </h1>
 
         <ul>
-            <li><a href="">Início</a></li>
-            <li><a href="">Sobre</a></li>
+            <li><a href="#start">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
             <li><a href="">Certificados</a></li>
             <li><a href="">Tecnologias</a></li>
             <li><a href="">Projetos</a></li>
@@ -22,7 +22,7 @@
     </div>
 
     <div class="container">
-        <div class="start">
+        <div class="start" id="start">
             <div class="card_left">
                 <h3>Hello World! Meu nome é</h3>
                 <h1>Gustavo Santos</h1>
@@ -38,38 +38,74 @@
             </div>
         </div>
 
-            <div class="about">
-                <h2>Sobre</h2>
-                <div class="panels">
-                    <div class="left-panel">
-                        <div>
-                            <img src="images/Captura de tela 2024-07-25 231727.png" alt="Gustavo Santos">
-                        </div>
+        <div class="about" id="about">
+            <h2>Sobre</h2>
+            <div class="panels">
+                <div class="left-panel">
+                    <div>
+                        <img src="images/Captura de tela 2024-07-25 231727.png" alt="Gustavo Santos">
                     </div>
-                    <div class="right-panel">
-                        <div class="menu">
-                            <button onclick="showContent('option1')"><i class="fas fa-user"></i></button>
-                            <button onclick="showContent('option2')"><i class="fas fa-info-circle"></i></button>
-                        </div>
-                        <div id="option1" class="content">
-                            <ul>
-                                <p>Meu nome é Gustavo Santos, atualmente estou cursando o 6º semestre de Ciências da Computação. Sou um entusiasmado por novas tecnologias e inovações dentro da área, e até o momento tive mais contato com o Front-end, mas estou focado em abranger meus conhecimentos a todas as áreas de desenvolvimento, com intuito de me tornar um desenvolvedor completo.</p>
-                                <br>
-                                <p>Minhas soft skills são proatividade, comunicação, dedicação, organização, facilidade em aprender e buscar conhecimento.</p>
-                            </ul>
-                        </div>
-                        <div id="option2" class="content">
-                            <ul>
-                                <li>Gustavo Pereira dos Santos</li>
-                                <li>Cursando Ciências da Computação</li>
-                                <li>20 anos</li>
-                                <li>Porto Alegre/RS</li>
-                                <li></li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="right-panel">
+                    <div class="menu">
+                        <button onclick="showContent('option1')"><i class="fas fa-user"></i></button>
+                        <button onclick="showContent('option2')"><i class="fas fa-info-circle"></i></button>
+                    </div>
+                    <div id="option1" class="content">
+                        <ul>
+                            <p>Meu nome é Gustavo Santos, atualmente estou cursando o 6º semestre de Ciências da Computação. Sou um entusiasmado por novas tecnologias einovações dentro da área, e até o momento tive mais contato com o Front-end, mas estou focado em abranger meus conhecimentos a todas as áreas dedesenvolvimento, com intuito de me tornar um desenvolvedor completo.</p>
+                            <br>
+                            <p>Minhas soft skills são proatividade, comunicação, dedicação, organização, facilidade em aprender e buscar conhecimento.</p>
+                        </ul>
+                    </div>
+                    <div id="option2" class="content">
+                        <ul>
+                            <li>Gustavo Pereira dos Santos</li>
+                            <li>6º semestre | Ciências da Computação</li>
+                            <li>20 anos</li>
+                            <li>Porto Alegre/RS</li>
+                            <li></li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="abilities">
+            <h2>Habilidades</h2>
+            <div class="list-abilities">
+                <div class="card">
+                    <img src="icons/html5.png" alt="HTML5">
+                    <h3>HTML5</h3>
+                    <p class="info">JavaScript é uma linguagem de programação que permite criar conteúdo dinâmico.</p>
+                </div>
+
+                <div class="card">
+                    <img src="icons/java.png" alt="Java">
+                    <h3>Java</h3>
+                    <p class="info">JavaScript é uma linguagem de programação que permite criar conteúdo dinâmico.</p>
+                </div>
+                
+                <div class="card">
+                    <img src="icons/javascript.png" alt="JavaScript">
+                    <h3>JavaScript</h3>
+                    <p class="info">JavaScript é uma linguagem de programação que permite criar conteúdo dinâmico.</p>
+                </div>
+
+                <div class="card">
+                    <img src="icons/css3.png" alt="CSS3">
+                    <h3>CSS3</h3>
+                    <p class="info">JavaScript é uma linguagem de programação que permite criar conteúdo dinâmico.</p>
+                </div>
+
+                <div class="card">
+                    <img src="icons/angular.png" alt="Angular">
+                    <h3>Angular</h3>
+                    <p class="info">JavaScript é uma linguagem de programação que permite criar conteúdo dinâmico.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>

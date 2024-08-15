@@ -58,3 +58,17 @@ function showContent(option) {
 document.addEventListener('DOMContentLoaded', () => {
     showContent('option1');
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.classList.add('active');
+        });
+
+        card.addEventListener('mouseout', () => {
+            card.classList.remove('active');
+        });
+    });
+});
