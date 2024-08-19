@@ -96,6 +96,7 @@ body{
 }
 
 .start{
+    margin-top: 80px;
     width: 100%;
     height: 750px;
     display: flex;
