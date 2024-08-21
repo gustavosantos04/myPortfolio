@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById('typing-text');
     const phrases = [
-        "Desenvolvedor Júnior",
-        "estudante de Ciência da Computação",
+        "Desenvolvedor Front-end",
+        "estudante de Ciências da Computação",
     ];
     let phraseIndex = 0;
 

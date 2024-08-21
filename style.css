@@ -150,6 +150,20 @@ body{
     transform: scale(1.5);
 }
 
+.download-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    background-color: #cc0404;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
 .card_right img {
     border-radius: 50%; 
     width: 100%;
@@ -215,8 +229,9 @@ body{
 .menu {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 0px 0px 15px 0px;
+    margin-bottom: 50px;
 }
 
 .menu button {
@@ -246,8 +261,10 @@ body{
 
 .content.active {
     display: flex;
-    height: 300px;
+    flex-direction: column;
+    height: 250px;
     align-items: center;
+    justify-content: center;
 }
 
 .content p {
