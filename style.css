@@ -283,7 +283,7 @@ body{
 .abilities {
     padding: 20px;
     height: 500px;
-    margin: 125px 0px;
+    margin: 200px 0px 125px 0px;
 }
 
 .abilities h2 {
@@ -350,6 +350,55 @@ body{
 .card.active .info {
     display: block;
     opacity: 1;
+}
+
+.certificates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin: 220px 0px 125px 0px;
+}
+
+.certificates h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.list-certificates {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    padding: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0px 20px;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.certificate-card h2 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
 }
 
 .footer {
