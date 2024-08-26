@@ -16,7 +16,7 @@
             <li><a href="#about">Sobre</a></li>
             <li><a href="#abilities">Tecnologias</a></li>
             <li><a href="#certificates">Certificados</a></li>
-            <li><a href="">Projetos</a></li>
+            <li><a href="#projects">Projetos</a></li>
             <li><a href="">Contato</a></li>
         </ul>
     </div>
@@ -115,8 +115,61 @@
                     <h2>Hackers do Bem - Básico</h2>
                 </div>
             </div>
-
         </div>
+
+        <div class="projects" id="projects">
+
+            <h2>Projetos</h2>
+
+            <div class="list-projects">
+
+                <button class="arrow left-arrow">&lt;</button>
+
+                <div class="project-card">
+                    <a href="https://github.com/gustavosantos04/Pokedex" target="_blank">
+                        <img src="images/pokedex.png" alt="Pokedex">
+                    </a>
+                    <h2>Pokedex</h2>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/gustavosantos04/login_screen" target="_blank">
+                        <img src="images/login screen.png" alt="Tela de Login">
+                    </a>
+                    <h2>Tela de Login</h2>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/gustavosantos04/theBlog" target="_blank">
+                        <img src="images/blog .png" alt="the blog">
+                    </a>
+                    <h2>Blog</h2>
+                </div>
+                <div class="project-card">
+                    <a href="https://github.com/gustavosantos04/clock" target="_blank">
+                        <img src="images/relogio.png" alt="relogio digital">
+                    </a>
+                    <h2>Relógio Digital</h2>
+                </div>
+
+                <button class="arrow right-arrow">&gt;</button>
+
+            </div>
+        </div>
+
+        <section class="contact">
+            <h2>Entre em contato</h2>
+            <form action="/submit-form" method="post">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Enviar Messangem</button>
+            </form>
+        </section>
 
     </div>
 
