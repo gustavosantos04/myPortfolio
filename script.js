@@ -97,3 +97,45 @@ document.querySelector('form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.abilities');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
+                element.classList.add('abilities-visible');
+            } else {
+                element.classList.remove('abilities-visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility); // Revalida ao redimensionar a janela
+    checkVisibility(); // Verifica a visibilidade ao carregar a página
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.projects');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
+                element.classList.add('projects-visible');
+            } else {
+                element.classList.remove('projects-visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility); // Revalida ao redimensionar a janela
+    checkVisibility(); // Verifica a visibilidade ao carregar a página
+});

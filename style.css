@@ -44,13 +44,14 @@ body{
 
 .menu_bar {   
     width: 100%;
-    height: 120px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
     position: fixed;
     top: 0;
+    background-color: #000000;
 }
 
 .menu_bar h1{
@@ -284,6 +285,15 @@ body{
     padding: 20px;
     height: 500px;
     margin: 200px 0px 125px 0px;
+    opacity: 0;
+    transform: translateY(100px); /* Move o elemento 20px para baixo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animação suave */
+}
+
+/* Estilo quando o elemento está visível */
+.abilities-visible {
+    opacity: 1;
+    transform: translateY(0); /* Move o elemento para a posição original */
 }
 
 .abilities h2 {
@@ -410,6 +420,13 @@ body{
     margin: 250px 0px 250px 0px;
     position: relative;
     overflow: hidden;
+    transform: translateY(100px); /* Move o elemento 20px para baixo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animação suave */
+}
+
+.projects-visible {
+    opacity: 1;
+    transform: translateY(0); /* Move o elemento para a posição original */
 }
 
 .projects h2 {
@@ -480,19 +497,26 @@ body{
 
 .contact {
     width: 100%;
-    max-width: 600px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
     background-color: transparent;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 125px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact h2 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 50px;
+    display: flex;
+    font-size: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form {
+    width: 800px;
 }
 
 .contact label {
@@ -520,9 +544,11 @@ body{
     cursor: pointer;
     font-weight: bold;
     font-size: 18px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .contact button:hover {
+    transform: scale(1.1);
     background-color: #f73e3e;
 }
 
@@ -535,5 +561,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer h3{
     font-size: 13px;
+    font-weight: 500;
 }
