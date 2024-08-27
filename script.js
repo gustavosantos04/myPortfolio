@@ -159,3 +159,12 @@ button.addEventListener('click', () => {
   
   button.prepend(icon); // Garantir que o ícone esteja sempre no início
 });*/
+
+document.getElementById('download-btn').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1nE2Y_RlQyfNJwqx1D9dU_PTwzqJNbtY6zrR7fHQxPos';  // Substitua pelo caminho do seu arquivo
+    link.download = 'Currículo_Gustavo_Santos.pdf';  // Substitua pelo nome desejado do arquivo
+    link.click();
+  });
+
+  
