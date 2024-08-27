@@ -139,3 +139,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', checkVisibility); // Revalida ao redimensionar a janela
     checkVisibility(); // Verifica a visibilidade ao carregar a página
 });
+
+/*const button = document.getElementById('darkModeButton');
+const icon = button.querySelector('i');
+
+button.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  button.classList.toggle('dark-mode');
+
+  if (document.body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+    button.textContent = '';
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+    button.textContent = '';
+  }
+  
+  button.prepend(icon); // Garantir que o ícone esteja sempre no início
+});*/
