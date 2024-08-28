@@ -97,41 +97,6 @@ body{
     transform: scaleX(1);
 }
 
-/*body {
-    transition: background-color 0.5s, color 0.5s;
-}
-  
-.darkbutton {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-}
-  
-button.dark-mode {
-    background-color: transparent;
-    color: white;
-}
-  
-body.dark-mode {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-  
-button i.fa-sun {
-    color: rgb(255, 255, 255);
-}
-  
-button i.fa-moon {
-    color: rgb(255, 255, 255);
-}*/
-
 .start{
     margin-top: 80px;
     width: 100%;
@@ -536,12 +501,11 @@ button i.fa-moon {
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
-    background-color: transparent;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 125px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact h2 {
@@ -551,43 +515,29 @@ button i.fa-moon {
     align-items: center;
 }
 
-.contact form {
-    width: 800px;
+.contact ul {
+    padding-left: 20px;
+    margin-top: 70px;
+    list-style-type: none;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
+}
+.contact ul li {
+    margin-right: 100px;
 }
 
-.contact label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+.contact  ul li i{
+    font-size: 35px;
+    color: white;
+    transition: transform 0.3s ease; 
 }
 
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+.contact ul li i:hover{
+    transform: scale(1.5);
 }
-
-.contact button {
-    width: 100%;
-    padding: 10px;
-    background-color: #cc0404;
-    transition: transform 0.5 ease;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.contact button:hover {
-    transform: scale(1.1);
-    background-color: #f73e3e;
-}
-
 
 .footer {
     background-color: white;

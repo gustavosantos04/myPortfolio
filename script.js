@@ -87,17 +87,6 @@ document.querySelectorAll('.menu_bar a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.querySelector('form').addEventListener('submit', function(event) {
-    let name = document.getElementById('name').value;
-    let email = document.getElementById('email').value;
-    let message = document.getElementById('message').value;
-
-    if (!name || !email || !message) {
-        alert("Please fill out all fields.");
-        event.preventDefault(); // Prevent form submission
-    }
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const elements = document.querySelectorAll('.abilities');
 
@@ -140,31 +129,9 @@ document.addEventListener('DOMContentLoaded', function() {
     checkVisibility(); // Verifica a visibilidade ao carregar a página
 });
 
-/*const button = document.getElementById('darkModeButton');
-const icon = button.querySelector('i');
-
-button.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  button.classList.toggle('dark-mode');
-
-  if (document.body.classList.contains('dark-mode')) {
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-    button.textContent = '';
-  } else {
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-    button.textContent = '';
-  }
-  
-  button.prepend(icon); // Garantir que o ícone esteja sempre no início
-});*/
-
 document.getElementById('download-btn').addEventListener('click', () => {
     const link = document.createElement('a');
     link.href = 'https://drive.google.com/uc?export=download&id=1nE2Y_RlQyfNJwqx1D9dU_PTwzqJNbtY6zrR7fHQxPos';  // Substitua pelo caminho do seu arquivo
     link.download = 'Currículo_Gustavo_Santos.pdf';  // Substitua pelo nome desejado do arquivo
     link.click();
   });
-
-  
