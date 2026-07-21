@@ -151,16 +151,4 @@ if (!reducedMotion) {
   drawParticles();
 }
 
-// Certificates open in an accessible native dialog
-const modal = document.querySelector('.certificate-modal');
-const modalImage = modal.querySelector('img');
-document.querySelectorAll('[data-certificate]').forEach((button) => {
-  button.addEventListener('click', () => {
-    modalImage.src = button.dataset.certificate;
-    modal.showModal();
-  });
-});
-modal.querySelector('.modal-close').addEventListener('click', () => modal.close());
-modal.addEventListener('click', (event) => { if (event.target === modal) modal.close(); });
-
 document.querySelector('#current-year').textContent = new Date().getFullYear();
