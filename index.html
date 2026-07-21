@@ -1,182 +1,200 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icons/logo-site-guga.ico" type="image/x-icon">
-    <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Portfólio de Gustavo Santos — desenvolvedor full stack criando experiências digitais marcantes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gustavo Santos — Creative Developer">
+  <meta property="og:description" content="Design, código e movimento em experiências digitais que deixam marca.">
+  <meta property="og:image" content="images/og-titanium.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gustavo Santos — Creative Developer">
+  <meta name="twitter:description" content="Design, código e movimento em experiências digitais que deixam marca.">
+  <meta name="twitter:image" content="images/og-titanium.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="icons/logo-site-guga.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Gustavo Santos — Creative Developer</title>
 </head>
 <body>
-    <div class="menu_bar">
-        <h1> &lt;gs/&gt; </h1>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-        <ul>
-            <li><a href="#start">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#abilities">Tecnologias</a></li>
-            <li><a href="#certificates">Certificados</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#footer">Contato</a></li>
-            <!--<li><button class="darkbutton" id="darkModeButton">
-                <i class="fas fa-moon"></i>
-              </button>
-            </li>-->
-        </ul>
-    </div>
+  <header class="site-header" data-header>
+    <a class="brand magnetic" href="#inicio" aria-label="Voltar ao início">
+      <span class="brand-mark">GS</span><span class="brand-dot">.</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+      <a href="#sobre"><span>01</span>Sobre</a>
+      <a href="#stack"><span>02</span>Stack</a>
+      <a href="#projetos"><span>03</span>Projetos</a>
+      <a href="#contato"><span>04</span>Contato</a>
+    </nav>
+    <a class="header-cta magnetic" href="#contato">Vamos conversar <span>↗</span></a>
+  </header>
 
-    <div class="container">
-        <div class="start" id="start">
-            <div class="card_left">
-                <h3>Hello World! Meu nome é</h3>
-                <h1>Gustavo Santos</h1>
-                <h3>E sou</h3><h3 id="typing-text"></h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/gustavo-pereira-dos-santos-9b726826a/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                    <li><a href="https://www.instagram.com/gugassantos_?igsh=ZzFlcGI3eHhkNHAx" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://github.com/gustavosantos04" target="_blank"><i class="fab fa-github"></i></a></li>
-                </ul>
-            </div>
-            <div class="card_right">
-                <img src="images/foto-gustavo.png" alt="Gustavo Santos">
-            </div>
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal"><span></span> Full-stack developer · Brasil</p>
+        <h1 id="hero-title" class="hero-title" aria-label="Gustavo Santos, creative developer">
+          <span class="title-line" data-parallax="-0.04">GUSTAVO</span>
+          <span class="title-line title-outline" data-parallax="0.03">SANTOS</span>
+        </h1>
+        <div class="hero-bottom reveal">
+          <p class="hero-intro">Transformo código em experiências digitais que <strong>se movem, respiram e deixam marca.</strong></p>
+          <a class="circle-link magnetic" href="#projetos" aria-label="Explorar projetos"><span>Explorar</span><b>↓</b></a>
         </div>
+      </div>
+      <div class="hero-stamp" aria-hidden="true">
+        <span>DESIGN • CODE • MOTION • </span>
+        <b>✦</b>
+      </div>
+      <p class="scroll-note" aria-hidden="true">SCROLL TO DISCOVER</p>
+    </section>
 
-        <div class="about" id="about">
-            <h2>Sobre</h2>
-            <div class="panels">
-                <div class="left-panel">
-                    <div>
-                        <img src="images/foto-gustavo.png" alt="Gustavo Santos">
-                    </div>
-                </div>
-                <div class="right-panel">
-                    <div class="menu">
-                        <button onclick="showContent('option1')"><i class="fas fa-user"></i></button>
-                        <button onclick="showContent('option2')"><i class="fas fa-info-circle"></i></button>
-                    </div>
-                    <div id="option1" class="content">
-                            <p>Meu nome é Gustavo Santos, sou um profissional com sólidos conhecimentos em HTML, CSS e Javascript. Além de conhecimentos em Angular e Java, todos conquistados atraves de cursos, projetos pessoais e estudos do meu dia a dia e obviamente da minha faculdade. Sou um futuro <span class="dev">Desenvolvedor Fullstack</span> dedicado ao aprimoramento de todas as experiência digital. Apaixonado por tecnologia e inovações, busco atraves dos meus estudos alcançar um nível avançado dos assustos mais pertinentes do âmbito. </p>
-                            <button class="download-btn">
-                                Baixar Currículo
-                            </button>
-                    </div>
-                    <div id="option2" class="content">
-                        <p>Curso Ciências da Computação e estou atualmente no 6º semestre, além de estar sempre estudano por cursos e aulas digitais para aumentar meus conhecimentos. Estou comprometido ao aprendizado contínuo, pois é crucial para um profissional da área da tecnologia estar sempre buscando novas experiências e novidades dentro do mercado para uma constante evolução.</p>
-                    </div>
-                </div>
-            </div>
+    <section class="manifesto section-pad" id="sobre" aria-labelledby="about-title">
+      <div class="section-kicker reveal"><span>01</span> Sobre mim</div>
+      <div class="manifesto-grid">
+        <div class="portrait-wrap reveal tilt-card">
+          <div class="portrait-frame">
+            <img src="images/foto-gustavo.png" alt="Retrato de Gustavo Santos" loading="lazy">
+            <div class="portrait-shade"></div>
+          </div>
+          <div class="portrait-label"><span>BASED IN</span><strong>SÃO PAULO, BR</strong></div>
         </div>
-
-        <div class="abilities" id="abilities">
-            <h2>------- Tecnologias --------</h2>
-            <div class="list-abilities">
-                <div class="card">
-                    <img src="icons/html5.png" alt="HTML5">
-                    <h3>HTML5</h3>
-                    <p class="info">Avançado</p>
-                </div>
-
-                <div class="card">
-                    <img src="icons/java.png" alt="Java">
-                    <h3>Java</h3>
-                    <p class="info">Básico</p>
-                </div>
-                
-                <div class="card">
-                    <img src="icons/javascript.png" alt="JavaScript">
-                    <h3>JavaScript</h3>
-                    <p class="info">Intermediário</p>
-                </div>
-
-                <div class="card">
-                    <img src="icons/css3.png" alt="CSS3">
-                    <h3>CSS3</h3>
-                    <p class="info">Avançado</p>
-                </div>
-
-                <div class="card">
-                    <img src="icons/angular.png" alt="Angular">
-                    <h3>Angular</h3>
-                    <p class="info">Básico</p>
-                </div>
-            </div>
+        <div class="manifesto-copy">
+          <h2 id="about-title" class="display-copy reveal">Eu construo o ponto de encontro entre <em>lógica</em> e <em>impacto.</em></h2>
+          <div class="about-details reveal">
+            <p>Sou Gustavo, desenvolvedor e estudante de Ciência da Computação. Gosto de transformar ideias em produtos rápidos, intuitivos e com personalidade — do primeiro pixel à última regra de negócio.</p>
+            <p>Este portfólio é meu laboratório: um espaço vivo para experimentar interfaces, animações e novas formas de criar na web.</p>
+          </div>
+          <div class="about-actions reveal">
+            <a class="btn-primary magnetic" href="images/Currículo_Gustavo_Santos.pdf" download>Baixar currículo <span>↓</span></a>
+            <div class="availability"><i></i><span>Disponível para novos desafios</span></div>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="certificates" id="certificates">
-            <h2>Certificados</h2>
+    <section class="stack-section section-pad" id="stack" aria-labelledby="stack-title">
+      <div class="section-kicker reveal"><span>02</span> Arsenal criativo</div>
+      <div class="stack-heading">
+        <h2 id="stack-title" class="display-copy reveal">Tecnologia é a ferramenta.<br><em>Experiência</em> é o resultado.</h2>
+        <p class="reveal">Uma stack em constante evolução para construir produtos sólidos, rápidos e memoráveis.</p>
+      </div>
+      <div class="stack-grid">
+        <article class="stack-card tilt-card reveal" data-index="01">
+          <img src="icons/html5.png" alt="" aria-hidden="true"><div><h3>HTML</h3><p>Semântica & acessibilidade</p></div><span>Avançado</span>
+        </article>
+        <article class="stack-card tilt-card reveal" data-index="02">
+          <img src="icons/css3.png" alt="" aria-hidden="true"><div><h3>CSS</h3><p>Motion & interfaces</p></div><span>Avançado</span>
+        </article>
+        <article class="stack-card tilt-card reveal" data-index="03">
+          <img src="icons/javascript.png" alt="" aria-hidden="true"><div><h3>JavaScript</h3><p>Interações & lógica</p></div><span>Intermediário</span>
+        </article>
+        <article class="stack-card tilt-card reveal" data-index="04">
+          <img src="icons/angular.png" alt="" aria-hidden="true"><div><h3>Angular</h3><p>Aplicações escaláveis</p></div><span>Em evolução</span>
+        </article>
+        <article class="stack-card tilt-card reveal" data-index="05">
+          <img src="icons/java.png" alt="" aria-hidden="true"><div><h3>Java</h3><p>Back-end & arquitetura</p></div><span>Em evolução</span>
+        </article>
+        <article class="stack-card stack-card-special reveal" data-index="∞">
+          <div class="special-icon">+</div><div><h3>Próxima tecnologia</h3><p>Curiosidade não tem versão final.</p></div><span>Sempre</span>
+        </article>
+      </div>
+    </section>
 
-            <div class="list-certificates">
-                <div class="certificate-card">
-                        <img src="images/certificado angular.png" alt="Certificado Angular DIO.">
-                    <h2>BootCamp Angular Banco Pan</h2>
-                </div>
-                <div class="certificate-card">
-                    <img src="images/hackers do bem.png" alt="Certificado Hackers do Bem - Básico">
-                    <h2>Hackers do Bem - Básico</h2>
-                </div>
-                <div class="certificate-card">
-                    <img src="images/AWS Cloud Foundation.png" alt="AWS Cloud Foundations">
-                    <h2>AWS Cloud Foundations</h2>
-                </div>
-            </div>
+    <section class="projects-section section-pad" id="projetos" aria-labelledby="projects-title">
+      <div class="section-kicker reveal"><span>03</span> Projetos selecionados</div>
+      <div class="projects-heading reveal">
+        <h2 id="projects-title">Trabalhos que<br><em>falam por si.</em></h2>
+        <span>(04)</span>
+      </div>
+      <div class="project-list">
+        <a class="project-item reveal" href="https://github.com/gustavosantos04/Pokedex" target="_blank" rel="noopener">
+          <span class="project-number">01</span>
+          <div class="project-image"><img src="images/pokedex.png" alt="Interface do projeto Pokédex" loading="lazy"></div>
+          <div class="project-copy"><h3>Pokédex</h3><p>API · JavaScript · Interface</p></div>
+          <span class="project-arrow">↗</span>
+        </a>
+        <a class="project-item reveal" href="https://github.com/gustavosantos04/login_screen" target="_blank" rel="noopener">
+          <span class="project-number">02</span>
+          <div class="project-image"><img src="images/login screen.png" alt="Interface do projeto Login Screen" loading="lazy"></div>
+          <div class="project-copy"><h3>Login Screen</h3><p>UI Design · Front-end</p></div>
+          <span class="project-arrow">↗</span>
+        </a>
+        <a class="project-item reveal" href="https://github.com/gustavosantos04/theBlog" target="_blank" rel="noopener">
+          <span class="project-number">03</span>
+          <div class="project-image"><img src="images/blog .png" alt="Interface do projeto The Blog" loading="lazy"></div>
+          <div class="project-copy"><h3>The Blog</h3><p>Angular · Componentes</p></div>
+          <span class="project-arrow">↗</span>
+        </a>
+        <a class="project-item reveal" href="https://github.com/gustavosantos04/clock" target="_blank" rel="noopener">
+          <span class="project-number">04</span>
+          <div class="project-image"><img src="images/relogio.png" alt="Interface do projeto Relógio Digital" loading="lazy"></div>
+          <div class="project-copy"><h3>Relógio Digital</h3><p>JavaScript · Experiment</p></div>
+          <span class="project-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="certificates-section section-pad" aria-labelledby="certificates-title">
+      <div class="section-kicker reveal"><span>04</span> Evolução contínua</div>
+      <div class="certificates-layout">
+        <div class="certificate-intro reveal">
+          <h2 id="certificates-title">Nunca<br>parar de<br><em>aprender.</em></h2>
+          <p>Conhecimento em movimento, sempre.</p>
         </div>
-
-        <div class="projects" id="projects">
-
-            <h2>Projetos</h2>
-
-            <div class="list-projects">
-
-                <button class="arrow left-arrow">&lt;</button>
-
-                <div class="project-card">
-                    <a href="https://github.com/gustavosantos04/Pokedex" target="_blank">
-                        <img src="images/pokedex.png" alt="Pokedex">
-                    </a>
-                    <h2>Pokedex</h2>
-                </div>
-                <div class="project-card">
-                    <a href="https://github.com/gustavosantos04/login_screen" target="_blank">
-                        <img src="images/login screen.png" alt="Tela de Login">
-                    </a>
-                    <h2>Tela de Login</h2>
-                </div>
-                <div class="project-card">
-                    <a href="https://github.com/gustavosantos04/theBlog" target="_blank">
-                        <img src="images/blog .png" alt="the blog">
-                    </a>
-                    <h2>Blog</h2>
-                </div>
-                <div class="project-card">
-                    <a href="https://github.com/gustavosantos04/clock" target="_blank">
-                        <img src="images/relogio.png" alt="relogio digital">
-                    </a>
-                    <h2>Relógio Digital</h2>
-                </div>
-
-                <button class="arrow right-arrow">&gt;</button>
-
-            </div>
+        <div class="certificate-list">
+          <button class="certificate-row reveal" type="button" data-certificate="images/certificado angular.png" aria-label="Visualizar certificado Bootcamp Angular Banco PAN">
+            <span>01</span><strong>Bootcamp Angular — Banco PAN</strong><small>DIO</small><b>↗</b>
+          </button>
+          <button class="certificate-row reveal" type="button" data-certificate="images/hackers do bem.png" aria-label="Visualizar certificado Hackers do Bem">
+            <span>02</span><strong>Hackers do Bem</strong><small>RNP / SENAI</small><b>↗</b>
+          </button>
+          <button class="certificate-row reveal" type="button" data-certificate="images/AWS Cloud Foundation.png" aria-label="Visualizar certificado AWS Cloud Foundations">
+            <span>03</span><strong>AWS Cloud Foundations</strong><small>AWS Academy</small><b>↗</b>
+          </button>
         </div>
+      </div>
+    </section>
 
-        <section class="contact">
-            <h2>Entre em contato</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/gustavo-pereira-dos-santos-9b726826a/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://www.instagram.com/gugassantos_?igsh=ZzFlcGI3eHhkNHAx" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://github.com/gustavosantos04" target="_blank"><i class="fab fa-github"></i></a></li>
+    <section class="contact-section" id="contato" aria-labelledby="contact-title">
+      <div class="contact-orb" aria-hidden="true"></div>
+      <p class="eyebrow reveal"><span></span> Tem uma ideia?</p>
+      <h2 id="contact-title" class="reveal">VAMOS CRIAR<br><em>ALGO FURIOSO.</em></h2>
+      <div class="contact-links reveal">
+        <a class="magnetic" href="https://www.linkedin.com/in/gustavo-pereira-dos-santos-9b726826a/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="magnetic" href="https://github.com/gustavosantos04" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="magnetic" href="https://www.instagram.com/gugassantos_" target="_blank" rel="noopener">Instagram ↗</a>
+      </div>
+    </section>
+  </main>
 
-            </ul>
-        </section>
+  <footer class="site-footer">
+    <div><span class="brand-mark">GS</span><span class="brand-dot">.</span></div>
+    <p>© <span id="current-year"></span> Gustavo Santos</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </footer>
 
-    </div>
+  <dialog class="certificate-modal" aria-label="Visualização do certificado">
+    <button class="modal-close" type="button" aria-label="Fechar">×</button>
+    <img src="" alt="Certificado de Gustavo Santos">
+  </dialog>
 
-    <script src="script.js"></script>
-
-    <div class="footer" id="footer">
-        <h3>Obrigado por visitar! Entre em contato! | © 2024 Gustavo Santos. Todos os direitos reservados.</h3>
-    </div>
+  <script src="script.js"></script>
 </body>
 </html>
